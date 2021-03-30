@@ -183,6 +183,34 @@
 }
 
 @media screen and (max-width: 480px){
+    /* .product_container{
+        display: block;
+      }
+    
+      .containerImages{
+        width: auto;
+      }
+    
+      .producto_description{
+        width: auto;
+
+      }
+      .containerImages{
+        grid-template: 182px 56px 45px 50px / repeat(3,1fr);
+        grid-template-areas:
+            "Image1 Image1 Image1"
+            "Image2 Image3 Image4"
+            "Image5 Image6 Image7"
+            "LabelImg5 LabelImg6 LabelImg7";
+            grid-gap: 14px 9px;
+        height: auto;
+        position: relative;
+        top: 0;
+    } */
+
+    .container{
+        max-width: 370px;
+    }
     .product_container{
         display: block;
       }
@@ -196,16 +224,186 @@
         /* fonttamaño */
       }
       .containerImages{
-        grid-template: 182px 56px 45px 50px / repeat(3,1fr);
+        grid-template: 182px 42px  / repeat(3,1fr);
         grid-template-areas:
             "Image1 Image1 Image1"
             "Image2 Image3 Image4"
             "Image5 Image6 Image7"
             "LabelImg5 LabelImg6 LabelImg7";
-            grid-gap: 14px 9px;
+            grid-gap: 14px 6px;
         height: auto;
         position: relative;
         top: 0;
+    }
+
+    .product_description{
+
+        grid-template: 26px 88px 80px 25px 96px 73px 350px 35px 140px 150px 85px 116px 174px 42px 85px 133px 32px 90px 70px 70px 70px 70px 70px / repeat(4,1fr);
+        grid-template-areas: "title-a1 title-a1 title-a1 title-a1"
+                             "title-a2 title-a2 title-a2 title-a2"
+                             "title-a3 title-a3 title-a3 title-a3"
+                             "title-a4 title-a4 title-a4 title-a4"
+                             "Price-a1 Price-a1 Price-a1 Price-a1"
+                             "title-a5 title-a5 title-a5 title-a5"
+                             "description-a1 description-a1 description-a1 description-a1"
+                             "title-a6 title-a6 title-a6 title-a6"
+                             "button-a1 button-a1 button-a1 button-a1"
+                             "button-a11 button-a11 button-a11 button-a11"
+                             "title-a7 title-a7 title-a7 title-a7"
+                             "button-a2 button-a2 button-a2 button-a2"
+                             "button-a22 button-a22 button-a22 button-a22"
+                             "title-a8 title-a8 title-a8 title-a8 "
+                             "button-a3 button-a3 button-a3 button-a3"
+                             "button-a33 button-a33 button-a33 button-a33"
+                             "title-a9 title-a9 title-a9 title-a9"
+                             "description-a2 description-a2 description-a2 description-a2"
+                             "description-a3 description-a3 description-a3 description-a3"
+                             "description-a4 description-a4 description-a4 description-a4"
+                             "description-a5 description-a5 description-a5 description-a5"
+                             "description-a6 description-a6 description-a6 description-a6"
+                             "description-a7 description-a7 description-a7 description-a7";
+        grid-gap: 0px 12px; 
+    }
+
+    .Img2R{
+        width: 35px;
+    }
+
+    .Img4R{
+        width: 70px;
+    }
+
+    .title1 {
+        font-size: 12.5px;
+        margin-top: 4px;
+    }
+
+    .title2 {
+        font-size: 33px;
+        line-height: 1.3;
+    }
+
+    .title3 {
+        font-size: 29px;
+        /* white-space: nowrap; */
+
+    }
+
+    .title4{
+        font-size: 14px;
+    }
+
+    .price1{
+        font-size: 38px;
+    }
+
+    .link1{
+        font-size: 21px;
+    }
+
+    .link2{
+        font-size: 21px;
+    }
+
+    .link3{
+        font-size: 21px;
+        /* white-space: nowrap; */
+
+    }
+
+    .description1{
+        font-size: 16px;
+    }
+
+    .Label {
+        visibility: hidden;
+    }
+
+    .Img5 {
+        visibility: hidden;
+    }
+
+    .Img6 {
+        visibility: hidden;
+    }
+
+    .Img7 {
+        visibility: hidden;
+    }
+
+    .title6{
+        font-size: 19px;
+    }
+
+    .TitleButton1{
+        font-size: 14px;
+        margin: 10px 0;
+    }
+
+    .descriptionButton{
+        font-size: 14px;
+    }
+
+    .button1{
+        height: 70%;
+    }
+
+    .title7{
+        font-size: 20.5px;
+        /* white-space: nowrap; */
+    }
+
+    .Titlenumber{
+        font-size: 14px;
+    }
+
+    .button3 {
+        padding: 6px;
+        padding-right: 26px;
+    }
+
+    .description-a2{
+        display: block;
+        padding-top: 14px;
+    }
+
+    .description-a3{
+        display: block;
+        padding-top: 14px;
+    }
+
+    .description-a4{
+        display: block;
+        padding-top: 14px;
+    }
+
+    .description-a5{
+        display: block;
+        padding-top: 14px;
+    }
+
+    .description-a6{
+        display: block;
+        padding-top: 14px;
+    }
+
+    .description-a7{
+        display: block;
+        padding-top: 14px;
+    }
+
+
+
+
+    .TitleSpecific{
+        margin-bottom: 10px;
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .descriptionSpecific{
+        margin-top: 0;
+        font-size: 14px;
     }
 
 }

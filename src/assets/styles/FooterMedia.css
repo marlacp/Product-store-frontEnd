@@ -65,11 +65,72 @@
 }
 
 @media screen and (max-width: 480px){
+    /* .footer{
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        height: auto;
+    } */
     .footer{
         position: relative;
         /* bottom: 0; */
         width: 100%;
         height: auto;
+    }
+
+    .principal{
+        display: block;
+    }
+
+    .descripFooter{
+        display: block;
+        /* visibility: hidden; */
+    }
+
+    .descriptionFooter {
+         visibility: hidden;
+         margin-top: -50px;
+    }
+
+    .desc1{
+        padding: 0;
+        margin: 0;
+    }
+
+    .desc2{
+        padding: 0;
+        margin: 0;
+    }
+
+    .pagoFooter{
+        display: block;
+        padding-right: 30px;
+        padding-bottom: 20px;
+    }
+
+    .ButtonPago{
+        padding: 0;
+        margin: 0;
+    }
+
+    .pagoDesc{
+        padding: 0;
+    }
+    .priceFooter {
+        font-size: 28px;
+    }
+
+    .descripFooter2 {
+        font-size: 13px;
+    }
+
+    .ButtonBuyNow {
+        padding: 17px 24px;
+        -webkit-border-radius: 8px 8px 8px 8px;
+    }
+
+    .BuyNow {
+        font-size: 16px;
     }
 }
 
