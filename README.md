@@ -3,7 +3,7 @@
 Hola! 👋
 Yo soy Marla Carolina Prieto Pelayo, la aspirante al cargo front-end con react js.
 
-Te cuento que este proyecto lo nombre Product-serempre-tests. Fue desarrollado con el framework React Js.
+Te cuento que este proyecto lo nombre Product-serempre-tests. Fue desarrollado con el framework React Js. Y el proyecto está en la rama master.
 
 ###Instalación 
 
