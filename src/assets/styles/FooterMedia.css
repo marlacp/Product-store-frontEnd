@@ -1,0 +1,138 @@
+@media screen and (max-width: 1024px){
+
+
+    .containerFooter {
+        max-width: 1000px;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+
+    .footer{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 100px;
+    }
+
+    .containerFooter{
+        max-width: 666px;
+    }
+    .titleFooter {
+        font-size: 9px;
+    }
+
+    .descripFooter {
+        font-size: 9px;
+    }
+
+    .desc1{
+        padding-top: 20px;
+    }
+    .desc2{
+        padding-top: 20px;
+        padding-left: 30px;
+    }
+
+    .pagoDesc {
+        padding-top: 30px;
+    }
+
+    .priceFooter {
+        font-size: 18px;
+    }
+
+    .descripFooter2{
+        font-size: 9px;
+    }
+    .ButtonBuyNow {
+        padding: 10px 16px;
+        -webkit-border-radius: 4px 4px 4px 4px;
+    }
+
+    .BuyNow {
+        font-size: 10px;
+
+    }
+    .ButtonPago {
+        padding-top: 30px;
+        padding-left: 18px;
+        padding-right: 0px;
+        padding-bottom: 24px;
+        margin-right: -18px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .footer{
+        position: relative;
+        /* bottom: 0; */
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .footer{
+        position: relative;
+        /* bottom: 0; */
+        width: 100%;
+        height: auto;
+    }
+
+    .principal{
+        display: block;
+    }
+
+    .descripFooter{
+        display: block;
+        /* visibility: hidden; */
+    }
+
+    .descriptionFooter {
+         visibility: hidden;
+         margin-top: -100px;
+    }
+
+    .desc1{
+        padding: 0;
+        margin: 0;
+    }
+
+    .desc2{
+        padding: 0;
+        margin: 0;
+    }
+
+    .pagoFooter{
+        display: block;
+        padding-right: 30px;
+        padding-bottom: 20px;
+    }
+
+    .ButtonPago{
+        padding: 0;
+        margin: 0;
+    }
+
+    .pagoDesc{
+        padding: 0;
+    }
+    .priceFooter {
+        font-size: 28px;
+    }
+
+    .descripFooter2 {
+        font-size: 13px;
+    }
+
+    .ButtonBuyNow {
+        padding: 17px 24px;
+        -webkit-border-radius: 8px 8px 8px 8px;
+    }
+
+    .BuyNow {
+        font-size: 16px;
+    }
+}
