@@ -322,6 +322,7 @@ ul {
     cursor: pointer;
     padding: 20px;
     text-align: left;
+    outline:0;
 }
 
 .button1:hover {
@@ -335,17 +336,25 @@ ul {
     background-color: #FFFFFF;
     border: 2px solid #1E96D4;
     transform: translateY(4px);
-    /* color: white; */
   } 
 
-.button1:focus {
-    outline:0;
+.button1.selected {
     background-color: #FFFFFF;
     border: 2px solid #1E96D4;
     box-shadow: 0 0 0 3px rgb(238,239,242);
+    border-color: #1E96D4;
     /* box-shadow: 0 2px #f6f5f5; */
     /* rgba(21, 156, 228, 0.4) */
   }
+
+  .button1.notSelected {
+    background-color: #FFFFFF;
+    border: 2px solid #B7BDC7;
+    box-shadow: 0 0 0 3px rgb(238,239,242);
+
+  }
+
+
 
   /* ***************** */
   .button2{
@@ -357,6 +366,7 @@ ul {
     cursor: pointer;
     padding: 20px;
     text-align: left;
+    outline:0;
 }
 
 
@@ -373,11 +383,18 @@ ul {
     transform: translateY(4px);
   } 
 
-.button2:focus {
-    outline:0;
+.button2.selected {
     background-color: #FFFFFF;
     border: 2px solid #1E96D4;
     box-shadow: 0 0 0 3px rgb(238,239,242);
+    border-color: #1E96D4;
+  }
+
+  .button2.notSelected {
+    background-color: #FFFFFF;
+    border: 2px solid #B7BDC7;
+    box-shadow: 0 0 0 3px rgb(238,239,242);
+
   }
   /* ******************** */
 
@@ -392,6 +409,7 @@ ul {
     display: flex;
     justify-content: space-between;
     text-align: left;
+    outline:0;
 
 }
 
@@ -409,11 +427,18 @@ ul {
     transform: translateY(4px);
   } 
 
-.button3:focus {
-    outline:0;
+.button3.selected {
+
     background-color: #FFFFFF;
     border: 2px solid #1E96D4;
     box-shadow: 0 0 0 3px rgb(238,239,242);
+  }
+
+  .button3.notSelected {
+    background-color: #FFFFFF;
+    border: 2px solid #B7BDC7;
+    box-shadow: 0 0 0 3px rgb(238,239,242);
+
   }
 
   /* ****************** */
@@ -428,6 +453,7 @@ ul {
     cursor: pointer;
     padding: 20px;
     text-align: left;
+    outline:0;
 
 }
 
@@ -445,13 +471,19 @@ ul {
     transform: translateY(4px);
   } 
 
-.button4:focus {
+.button4.selected {
     outline:0;
     background-color: #FFFFFF;
     border: 2px solid #1E96D4;
     box-shadow: 0 0 0 3px rgb(238,239,242);
   }
 
+  .button4.notSelected {
+    background-color: #FFFFFF;
+    border: 2px solid #B7BDC7;
+    box-shadow: 0 0 0 3px rgb(238,239,242);
+
+  }
   /* ****************** */
 
 .button5{
@@ -465,6 +497,7 @@ ul {
     display: flex;
     justify-content: space-between;
     text-align: left;
+    outline:0;
 
 }
 
@@ -482,13 +515,19 @@ ul {
     transform: translateY(4px);
   } 
 
-.button5:focus {
-    outline:0;
+.button5.selected {
+
     background-color: #FFFFFF;
     border: 2px solid #1E96D4;
     box-shadow: 0 0 0 3px rgb(238,239,242);
   }
 
+  .button5.notSelected {
+    background-color: #FFFFFF;
+    border: 2px solid #B7BDC7;
+    box-shadow: 0 0 0 3px rgb(238,239,242);
+
+  }
   /* ****************** */
 .title7{
     color: #111111;
@@ -669,6 +708,7 @@ ul {
     -webkit-border-radius: 8px 8px 8px 8px;
     border: 2px solid #EEEFF2;
     cursor: pointer;
+    outline:0;
 
 }
 
@@ -686,11 +726,18 @@ ul {
     transform: translateY(4px);
   } 
 
-.buttonImage2:focus {
-    outline:0;
+.buttonImage2.selected {
     background-color: #FFFFFF;
     border: 2px solid #1E96D4;
     box-shadow: 0 0 0 3px rgb(238,239,242);
+    border-color: #1E96D4;
+  }
+
+  .buttonImage2.notSelected {
+    background-color: #FFFFFF;
+    border: 2px solid #B7BDC7;
+    box-shadow: 0 0 0 3px rgb(238,239,242);
+
   }
   /* ******************** */
 .buttonImage3{
@@ -702,6 +749,7 @@ ul {
     -webkit-border-radius: 8px 8px 8px 8px;
     border: 2px solid #EEEFF2;
     cursor: pointer;
+    outline:0;
 }
 
 .buttonImage3:hover {
@@ -710,6 +758,7 @@ ul {
 
   }
 
+
   
 .buttonImage3:active{
     background-color: #FFFFFF;
@@ -717,11 +766,18 @@ ul {
     transform: translateY(4px);
   } 
 
-.buttonImage3:focus {
-    outline:0;
+.buttonImage3.selected  {
     background-color: #FFFFFF;
     border: 2px solid #1E96D4;
     box-shadow: 0 0 0 3px rgb(238,239,242);
+    border-color: #1E96D4;
+  }
+
+  .buttonImage3.notSelected {
+    background-color: #FFFFFF;
+    border: 2px solid #B7BDC7;
+    box-shadow: 0 0 0 3px rgb(238,239,242);
+
   }
   /* ******************** */
 
@@ -733,6 +789,7 @@ ul {
     -webkit-border-radius: 8px 8px 8px 8px;
     border: 2px solid #EEEFF2;
     cursor: pointer;
+    outline:0;
 }
 
 .buttonImage4:hover {
@@ -748,11 +805,18 @@ ul {
     transform: translateY(4px);
   } 
 
-.buttonImage4:focus {
-    outline:0;
+.buttonImage4.selected  {
     background-color: #FFFFFF;
     border: 2px solid #1E96D4;
     box-shadow: 0 0 0 3px rgb(238,239,242);
+    border-color: #1E96D4;
+  }
+
+  .buttonImage4.notSelected {
+    background-color: #FFFFFF;
+    border: 2px solid #B7BDC7;
+    box-shadow: 0 0 0 3px rgb(238,239,242);
+
   }
   /* ******************** */
 

@@ -12,8 +12,10 @@ import smallImage6 from '../../assets/static/Shape.png';
 import smallImage7 from '../../assets/static/Combined Shape.png';
 import '../../assets/styles/Product.css';
 import '../../assets/styles/ProductMedia.css';
+import {Footer} from '../Footer/Footer';
+import { Helmet } from "react-helmet";
 // eslint-disable-next-line jsx-a11y/alt-text
-const Product = () => {
+export const Product = () => {
 
     const images = {
         2:{
@@ -29,11 +31,23 @@ const Product = () => {
             smallImage: smallImage4
         }
     };
-
     
     const [img, setImg] = useState(2);
 
+    const [finish, setFinish] = useState(null);
+
+    const [warranty, setWarranty] = useState('2years');
+
+    const [feature, setFeature] = useState('voiceA');
+    
+
   return (
+    <div>
+    <Helmet>
+        <title>MOMENTUM True Wireless 2</title>
+        <meta name="description" content="For the past 75 years, Sennheiser has put sound first. The new MOMENTUM True Wireless 2 is no different. Thanks to leading audio technology and innovation, these new earbuds deliver the best listening experience anytime, anywhere. With improved ergonomics designed for full day wearing and refined touch controls for a more personalised experience, they have been finely crafted for the most discerning listener and aim to simplify your life by enhancing your everyday."/>
+        <meta name="title" content="MOMENTUM True Wireless 2"/>
+    </Helmet>
     <div className="container">
         <div className="Hero">
             <img
@@ -53,19 +67,19 @@ const Product = () => {
 
                 <div className="Image2">
 
-                    <button className='buttonImage2' onClick={() => {setImg(2);}} value='Image2'>
+                    <button className={`buttonImage2 ${img === 2 ?  "selected" : ""} ${img === 3 || img === 4 ? "notSelected":""}`} onClick={() => {setImg(2);}} value='Image2'>
                           <img className="ImgSmall Img2R" src={images[2].smallImage} alt="Image2"/>
                     </button>
                 </div>
 
                 <div className="Image3">
-                    <button className='buttonImage3' onClick={() => {setImg(3);}} value='Image3'>
+                    <button className={`buttonImage3 ${img === 3 ?  "selected" : ""} ${img === 2 || img === 4 ? "notSelected":""}`} onClick={() => {setImg(3);}} value='Image3'>
                         <img className="ImgSmall" src={images[3].smallImage} alt="Image3"/>
                     </button>
                 </div>
 
                 <div className="Image4">
-                    <button className='buttonImage4' onClick={() => {setImg(4);}} value='Image4'>
+                    <button className={`buttonImage4 ${img === 4 ?  "selected" : ""} ${img === 2 || img === 3 ? "notSelected":""}`} onClick={() => {setImg(4);}} value='Image4'>
                         <img className="ImgSmall Img4R" src={images[4].smallImage} alt="Image4"/>
                     </button>
                 </div>
@@ -135,7 +149,7 @@ const Product = () => {
                 </div>
 
                 <div className="button-a1">
-                    <button className="button1"> 
+                    <button className={`button1 ${finish === 'white'?  "selected" : ""} ${finish ==='black'? "notSelected":""}`} onClick={()=>{setFinish('white');}} > 
                         <p className="TitleButton1">Ivory White </p>
                         <p className="descriptionButton">
                         For the past 75 years, Sennheiser has put sound first. The new MOMENTUM True. 
@@ -144,7 +158,7 @@ const Product = () => {
                 </div>
                 
                 <div className="button-a11">
-                    <button className="button1"> 
+                    <button className={`button1 ${finish === 'black'?  "selected" : ""} ${finish ==='white'? "notSelected":""}`} onClick={()=>{setFinish('black');}}> 
                         <p className="TitleButton1">Matte Black</p>
                         <p className="descriptionButton">
                         Of all of the celestial bodies that capture our attention and fascination as astronomers.
@@ -157,7 +171,7 @@ const Product = () => {
                 </div>
 
                 <div className="button-a2">
-                    <button className="button2"> 
+                    <button className={`button2 ${warranty === '2years'?  "selected" : ""} ${warranty ==='3years'? "notSelected":""}`} onClick={()=>{setWarranty('2years');}}> 
                         <p className="TitleButton1">2 years coverage</p>
                         <p className="descriptionButton">
                         For the past 75 years, Sennheiser has put sound first.
@@ -166,7 +180,7 @@ const Product = () => {
                 </div>
 
                 <div className="button-a22">
-                    <button className="button3"> 
+                    <button className={`button3 ${warranty === '3years'?  "selected" : ""} ${warranty ==='2years'? "notSelected":""}`} onClick={()=>{setWarranty('3years');}}> 
                         <div>
                         <p className="TitleButton1">3 years coverage</p>
                         <p className="descriptionButton">
@@ -186,13 +200,13 @@ const Product = () => {
                 </div>
 
                 <div className="button-a3">
-                    <button className="button4"> 
+                    <button className={`button4 ${feature === 'voiceA'?  "selected" : ""} ${feature ==='customC'? "notSelected":""}`} onClick={()=>{setFeature('voiceA');}}> 
                         <p className="TitleButton1">Voice Assistant support</p>
                     </button>
                 </div>
 
                 <div className="button-a33">
-                    <button className="button5"> 
+                    <button className={`button5 ${feature === 'customC'?  "selected" : ""} ${feature ==='voiceA'? "notSelected":""}`} onClick={()=>{setFeature('customC');}}> 
 
                     <div>
                      <p className="TitleButton1">Customizable controls</p> 
@@ -241,7 +255,11 @@ const Product = () => {
 
             </div>
         </div>
-
+    </div>
+        <Footer 
+            warranty={warranty}
+            feature={feature}
+        />
     </div>
   );
 };
