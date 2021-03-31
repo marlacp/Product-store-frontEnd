@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import LogoSerempre from '../../assets/static/download.png';
 import bigImage2 from '../../assets/static/product_detail_x1_mobile_MOMENTUM_True_Wireless_2_Case_black_Sennheiser.png';
 import bigImage3 from '../../assets/static/big-MOMENTUM-TRUEWIRELESS2@3x-2.png';
@@ -14,7 +14,18 @@ import '../../assets/styles/Product.css';
 import '../../assets/styles/ProductMedia.css';
 import {Footer} from '../Footer/Footer';
 import { Helmet } from "react-helmet";
+import Backdrop from '@material-ui/core/Backdrop';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import {db} from '../../firebase';
+import { makeStyles } from '@material-ui/core/styles';
 // eslint-disable-next-line jsx-a11y/alt-text
+
+const useStyles = makeStyles((theme) => ({
+	backdrop: {
+		zIndex: theme.zIndex.drawer + 1,
+		color: '#fff',
+	},
+}));
 export const Product = () => {
 
     const images = {
@@ -39,7 +50,34 @@ export const Product = () => {
     const [warranty, setWarranty] = useState('2years');
 
     const [feature, setFeature] = useState('voiceA');
+
+    const [products, setProducts] = useState({
+        description: '',
+        price: '',
+        subTitle: '',
+        title: ''
+    });
+    const classes = useStyles();
+    const [loading, setLoaging] = useState(true);
     
+    function getProducts() {
+        //Aquí se visualiza el loading
+        setLoaging(true);
+        //se llama los datos actualizados, y  se combinan en un arreglo, los datos con su id
+        db.collection("products").onSnapshot((querySnapshot) => {
+            const docs = [];
+              querySnapshot.forEach((doc) => {
+                  docs.push({ ...doc.data(), id: doc.id });
+              });
+              setProducts(docs[0]);
+              //Aqui se quita el loading
+              setLoaging(false);
+          });
+      }
+  
+      useEffect(() => {
+          getProducts();
+        },[]);
 
   return (
     <div>
@@ -104,18 +142,19 @@ export const Product = () => {
 
             </div>
 
-
+            
             <div className="product_description">
+                       
                 <div className="title-a1">
                     <p className="title1">NEW RELEASE</p>
                 </div>
 
                 <div className="title-a2">
-                    <p className="title2">MOMENTUM True Wireless 2</p>
+                    <p className="title2">{products.title}</p>
                 </div>
                 
                 <div className="title-a3">
-                    <p className="title3">Earbuds that put sound first</p>
+                    <p className="title3">{products.subTitle}</p>
                 </div>
                 
                 <div className="title-a4">
@@ -123,7 +162,7 @@ export const Product = () => {
                 </div>
 
                 <div className="Price-a1">
-                    <p className="price1">$295.95</p>
+                    <p className="price1">${products.price}</p>
                 </div>
 
                 <div className="title-a5">
@@ -141,7 +180,7 @@ export const Product = () => {
                 </div>
 
                 <div className="description-a1">
-                    <p className="description1">For the past 75 years, Sennheiser has put sound first. The new MOMENTUM True Wireless 2 is no different. Thanks to leading audio technology and innovation, these new earbuds deliver the best listening experience anytime, anywhere. With improved ergonomics designed for full day wearing and refined touch controls for a more personalised experience, they have been finely crafted for the most discerning listener and aim to simplify your life by enhancing your everyday. </p>
+                    <p className="description1"> {products.description} </p>
                 </div>
 
                 <div className="title-a6">
@@ -252,15 +291,20 @@ export const Product = () => {
                     <div><p className="TitleSpecific">Noise cancellation</p></div>
                     <div><p className="descriptionSpecific">Single-Mic ANC per earbud side</p></div>
                 </div>
-
+        
             </div>
         </div>
+        <Backdrop className={classes.backdrop} open={ loading }>
+				<CircularProgress color="inherit" />
+		</Backdrop>
     </div>
         <Footer 
             warranty={warranty}
             feature={feature}
         />
     </div>
+
+
   );
 };
 

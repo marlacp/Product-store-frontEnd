@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Product from './Products/Product';
 import '../assets/styles/App.css'
+import '../firebase'
 
 function App() {
   return (
