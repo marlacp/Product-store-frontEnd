@@ -1,15 +1,15 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, {useState, useEffect} from 'react';
-import LogoSerempre from '../../assets/static/download.png';
-import bigImage2 from '../../assets/static/product_detail_x1_mobile_MOMENTUM_True_Wireless_2_Case_black_Sennheiser.png';
-import bigImage3 from '../../assets/static/big-MOMENTUM-TRUEWIRELESS2@3x-2.png';
-import bigImage4 from '../../assets/static/Screen Shot 2020-08-11 at 10.15-2.png';
-import smallImage2 from '../../assets/static/product_detail_x1_mobile_MOMENTUM_True_Wireless_2_Case_black_Sennheiser-1.png';
-import smallImage3 from '../../assets/static/big-MOMENTUM-TRUEWIRELESS2.png';
-import smallImage4 from '../../assets/static/Screen Shot 2020-08-11 at 10.15-8.png';
-import smallImage5 from '../../assets/static/Path.png';
-import smallImage6 from '../../assets/static/Shape.png';
-import smallImage7 from '../../assets/static/Combined Shape.png';
+import Logo from '../../assets/static/Logo.PNG';
+import bigImage2 from '../../assets/static/wireless1.jpg';
+import bigImage3 from '../../assets/static/wireless2.jpg';
+import bigImage4 from '../../assets/static/wireless3.jpg';
+import smallImage2 from '../../assets/static/wireless1-1.jpg';
+import smallImage3 from '../../assets/static/wireless2-2.jpg';
+import smallImage4 from '../../assets/static/wireless3-3.jpg';
+import smallImage5 from '../../assets/static/touchLogo.jpg';
+import smallImage6 from '../../assets/static/equilizerlogo.jpg';
+import smallImage7 from '../../assets/static/noiseCancelation.jpg';
 import '../../assets/styles/Product.css';
 import '../../assets/styles/ProductMedia.css';
 import {Footer} from '../Footer/Footer';
@@ -82,18 +82,19 @@ export const Product = () => {
   return (
     <div>
     <Helmet>
-        <title>MOMENTUM True Wireless 2</title>
-        <meta name="description" content="For the past 75 years, Sennheiser has put sound first. The new MOMENTUM True Wireless 2 is no different. Thanks to leading audio technology and innovation, these new earbuds deliver the best listening experience anytime, anywhere. With improved ergonomics designed for full day wearing and refined touch controls for a more personalised experience, they have been finely crafted for the most discerning listener and aim to simplify your life by enhancing your everyday."/>
-        <meta name="title" content="MOMENTUM True Wireless 2"/>
+        <title>Wireless</title>
+        <meta name="description" content="For the past 75 years, Sennheiser has put sound first. The new Wireless is no different. Thanks to leading audio technology and innovation, these new earbuds deliver the best listening experience anytime, anywhere. With improved ergonomics designed for full day wearing and refined touch controls for a more personalised experience, they have been finely crafted for the most discerning listener and aim to simplify your life by enhancing your everyday."/>
+        <meta name="title" content="Wireless"/>
     </Helmet>
-    <div className="container">
         <div className="Hero">
             <img
                 className="LogoS"
-                src={LogoSerempre}
+                src={Logo}
                 alt="Serempre"
              />
         </div>
+    <div className="container">
+
 
         <div className="product_container">
 
@@ -293,6 +294,7 @@ export const Product = () => {
                 </div>
         
             </div>
+        
         </div>
         <Backdrop className={classes.backdrop} open={ loading }>
 				<CircularProgress color="inherit" />
