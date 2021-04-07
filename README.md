@@ -1,9 +1,7 @@
 
-# Prueba Front End para Serempre
+# Product-store-FrontEnd
 Hola! 👋
-Yo soy Marla Carolina Prieto Pelayo, la aspirante al cargo front-end con react js.
-
-Te cuento que este proyecto lo nombre Product-serempre-tests. Fue desarrollado con el framework React Js. Y el proyecto está en la rama master.
+Te presento este proyecto front-end realizado con el framework react js y cuenta con un back-end con firebase. Su diseño esta realizado con herramienta como css grid layout, react hoocks.
 
 ###Instalación 
 
@@ -14,10 +12,10 @@ Una vez ejecutado, instalara todas las dependencias, y corres el proyecto con:
 
 `$ npm start`
 
-Para el desarrollo de este proyecto, lo dividi en 2 componentes, "footer" y "Products" , estos se encuentran dentro de la carpeta `src`, en el archivo Product.jsx encuentras todo el código de la página, y en el archivo Footer.jsx encuentras todo el código del footer. 
+Para el desarrollo de este proyecto, lo dividi en 2 componentes, "footer" y "Products" , estos se encuentran dentro de la carpeta `src`, en el archivo Product.jsx encuentras todo el código de la página, y en el archivo Footer.jsx encuentras todo el código del footer. El componente Products es el comoponente padre, que le sumara al footer precios, y garantía. 
 
 También dentro de la carpeta `assets` encontrarás los estilos del proyecto, las imagenes y fuentes de letra.
 
 El proyecto lo desplegue con firebase, y lo encuentras aquí 👉 https://product-serempre-test.web.app/
 
-Te agradezco mucho por tu tiempo, te agradecería tu feedback, mi correo es `marla.prieto.pelayo@gmail.com` mil gracias, buen día!
+buen día!
